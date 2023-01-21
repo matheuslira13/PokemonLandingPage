@@ -1,0 +1,102 @@
+@import "../../globalStyles/globalStyles.scss";
+.container {
+  .containerContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .subContainerContent {
+      width: 75vw;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+
+      .containerPokedex {
+        margin: 10px;
+      }
+    }
+    .containerContentTitle {
+      font-size: 30px;
+      color: $white;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      text-align: center;
+      scroll-margin-top: 80px;
+    }
+    .containerCardPokeType {
+      display: flex;
+      width: 75vw;
+      overflow-x: auto;
+    }
+  }
+  .containerEmailDiv {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    .InfoEmail {
+      display: flex;
+      flex-direction: column;
+      .titleNewsLetter {
+        font-size: 60px;
+        font-weight: bolder;
+      }
+      .color {
+        color: $semiYellow;
+      }
+      .imgNewsLetter {
+        width: 300px;
+      }
+      @media screen and (max-width: 700px) {
+        .titleNewsLetter {
+          font-size: 40px;
+        }
+        .imgNewsLetter {
+          width: 150px;
+        }
+      }
+    }
+    .containerForm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  .containerFooter {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .wrapLogoFooter {
+      scroll-margin-top: 80px;
+      .logoFooter {
+        width: 230px;
+        height: 50px;
+      }
+    }
+    .emailFooter {
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+    .socialMidias {
+      ul {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        li a {
+          color: inherit;
+          padding: 5px;
+          .iconFooter {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

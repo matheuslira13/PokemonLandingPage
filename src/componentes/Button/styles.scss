@@ -1,0 +1,12 @@
+@import "../../globalStyles/globalStyles.scss";
+.containerButton {
+  background-color: $yellow;
+  border: none;
+  width: 150px;
+  border-radius: 16px;
+  height: 30px;
+  .icon {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+}

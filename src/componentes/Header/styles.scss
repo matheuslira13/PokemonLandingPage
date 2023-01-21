@@ -1,0 +1,105 @@
+@import "../../globalStyles/globalStyles.scss";
+.containerHeader {
+  background-color: transparent;
+  display: flex;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  justify-content: space-between;
+  padding-left: 80px;
+  backdrop-filter: blur(10px);
+  padding-right: 80px;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  @media screen and (max-width: 700px) {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  .containerImgLogo {
+    width: 230px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .hamburgueIconMenu {
+    display: none;
+    @media screen and (max-width: 700px) {
+      display: block;
+      margin-right: 30px;
+    }
+  }
+  .hamburgueIconMenuClose {
+    display: none;
+  }
+  .menuMobileOn {
+    display: flex;
+    width: 200px;
+    background-color: $black;
+    height: 100%;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: 0;
+    nav {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-end;
+      .closeIconMenu {
+        font-size: 30px;
+        transition: color 0.5s;
+      }
+      .closeIconMenu:hover {
+        font-size: 30px;
+        color: $semiYellow;
+      }
+      ul {
+        list-style: none;
+
+        li {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          font-size: 20px;
+          transition: color 0.5s;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+        li:hover {
+          transition: ease;
+          color: $semiYellow;
+        }
+      }
+    }
+  }
+  .menuMobileOff {
+    display: none;
+  }
+  .menuDesktop {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      li {
+        padding-left: 10px;
+        padding-right: 10px;
+        transition: color 0.5s;
+        font-weight: 700;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+      li:hover {
+        transition: ease;
+        color: $semiYellow;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
+}

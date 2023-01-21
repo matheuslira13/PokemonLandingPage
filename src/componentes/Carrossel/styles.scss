@@ -1,0 +1,90 @@
+@import "../../globalStyles/globalStyles.scss";
+.mainContainerCarrosel::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+.mainContainerCarrosel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  .containerCarrosel {
+    display: flex;
+    width: 100%;
+    height: 700px;
+    align-items: flex-end;
+    flex: none;
+    @media screen and (max-width: 450px) {
+      height: 400px;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .containerText {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-left: 80px;
+      margin-bottom: 80px;
+      @media screen and (max-width: 450px) {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        flex: none;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .titleCarrosel {
+        color: $white;
+        font-size: 56px;
+        font-weight: 800;
+        text-align: left;
+        @media screen and (max-width: 700px) {
+          font-size: 40px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 30px;
+        }
+      }
+      .subTitleCarrosel {
+        color: $semiWhite;
+        font-size: 20px;
+        text-align: left;
+        @media screen and (max-width: 450px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .containerControlerCarrosel {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+      @media screen and (max-width: 450px) {
+        flex: none;
+        margin-bottom: 0px;
+        width: 200px;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        .controlerCarrosel {
+          font-size: 36px;
+          margin-left: 50px;
+          color: $white;
+          @media screen and (max-width: 450px) {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}

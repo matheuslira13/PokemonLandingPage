@@ -1,0 +1,233 @@
+@import "../../globalStyles/globalStyles.scss";
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 80vh;
+  margin-top: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  color: $black;
+  @media screen and (max-width: 450px) {
+    width: 300px;
+  }
+  @media screen and (max-width: 350px) {
+    width: 250px;
+  }
+  .iconCloseModal {
+    margin-left: auto;
+    font-size: 30px;
+    position: absolute;
+    right: 0px;
+    margin-right: 10px;
+    transition: color 0.5s;
+  }
+  .iconCloseModal:hover {
+    transition: ease;
+    color: rgb(255, 215, 0);
+  }
+  .containerImgModal {
+    display: flex;
+    .containerImgPokemon {
+      text-align: center;
+      .pokemonModalImg {
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 16px;
+        background-color: $yellow;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .grafico {
+    width: 100%;
+    h2 {
+      text-align: center;
+    }
+    .containerGrafico {
+      display: flex;
+      .containerStat {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .containerDetails {
+        display: flex;
+        height: 30px;
+        width: 200px;
+        background-color: $semiBlack;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        .details {
+          height: 30px;
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  .containerAbility {
+    width: 100%;
+    h2 {
+      text-align: center;
+    }
+    .subContainerAbility {
+      display: flex;
+      justify-content: center;
+      .abilityName {
+        margin: 10px;
+      }
+    }
+  }
+  .containerMoves {
+    .containerTitlesModal {
+      display: flex;
+      justify-content: space-around;
+      h3 {
+        text-align: center;
+      }
+    }
+    .subContainerMoves {
+      display: flex;
+      flex-direction: column;
+      .containerMoveGame {
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        align-items: center;
+        .moveTitle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          flex: 1;
+        }
+        .containerMoveName {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          overflow-x: scroll;
+          .containerMoveNameItem {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.modalContainerNewsLetter {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 200px;
+  margin-top: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  color: $black;
+  @media screen and (max-width: 700px) {
+    width: 500px;
+  }
+  @media screen and (max-width: 550px) {
+    width: 250px;
+    height: 300px;
+  }
+  .iconCloseModal {
+    margin-left: auto;
+    font-size: 30px;
+    position: absolute;
+    right: 0px;
+    margin-right: 10px;
+    transition: color 0.5s;
+  }
+  .iconCloseModal:hover {
+    transition: ease;
+    color: $semiYellow;
+  }
+  .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+
+  .checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin-top: 10px;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+  }
+
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    background-color: $black;
+  }
+  h2 {
+    overflow: hidden;
+
+    @media screen and (max-width: 700px) {
+      font-size: 16px;
+    }
+    span {
+      color: $semiYellow;
+    }
+  }
+  .text {
+    margin-top: 10px;
+    text-align: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and (max-width: 550px) {
+      font-size: 10px;
+    }
+    span {
+      color: $semiYellow;
+      font-weight: bold;
+      font-size: 20px;
+      padding-right: 10px;
+      @media screen and (max-width: 700px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 10px;
+      }
+    }
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}

@@ -1,0 +1,13 @@
+.conatinerType {
+  display: flex;
+  padding: 5px;
+  border-radius: 180px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 100px;
+  margin: 5px;
+  .imgContainer {
+    width: 100px;
+  }
+}
