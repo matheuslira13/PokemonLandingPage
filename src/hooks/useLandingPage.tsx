@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { IsEmailValid } from "../utils/functions";
+import { client } from "../config/client-graphql";
+import { gql, useQuery } from "@apollo/client";
 
 export const useLandingPage = () => {
   useEffect(() => {
